@@ -12,7 +12,7 @@
      */
     app.use(express.json());
     app.use((request, response, next) => {
-        config.logFile(request, logs)
+       // config.logFile(request, logs)
         next()
     })
     

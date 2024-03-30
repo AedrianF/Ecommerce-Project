@@ -1,0 +1,25 @@
+.hidenav {
+    transform: translateY(-60px);
+    box-shadow: none;
+} 
+#navbar {
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    transition: transform 0.2s;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+#drop {
+    list-style: none;
+}
+
+nav div a:not(.logo, .drop):after, nav li:after {
+    display: block;
+    content: '';
+    border-bottom: 1px solid white;
+    transform: scale(0);
+    transition: all 0.5s ease-in-out;
+}
+nav div a:not(.logo, .drop):hover::after, nav li:hover::after {
+    transform: scaleX(1);
+}
