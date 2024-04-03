@@ -6,40 +6,106 @@
 
     const setHeader = () => {
         const navbar = document.getElementById('navbar')
-        navbar.innerHTML = ` <!-- Nav Bar Start-->
-        <nav class="navbar navbar-expand-lg bg-dark text-end bg-opacity-50" id="navbar">
+        navbar.innerHTML = `<!-- Navbar -->
+        <nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
             <div class="container-fluid">
-              <a class="navbar-brand text-light logo" href="#"><img src="./Assets/logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top navlogo"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                  <a class="nav-link active text-light" aria-current="page" href="index.html">Home</a>
-                  <ul id="drop">
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle drop text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Products
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Product #1</a></li>
-                        <li><a class="dropdown-item" href="#">Product #2</a></li>
-                        <li><a class="dropdown-item" href="#">Product #3</a></li>
-                        <li><a class="dropdown-item" href="#">Product #4</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                  <a class="nav-link active text-light ms-3" aria-current="page" href="#credits">About Us</a>
-                  <a class="nav-link active text-light ms-3" aria-current="page" href="#credits">Sign In</a>
-                </div>
-              </div>
+            <a class="navbar-brand" href="#">BRAND</a>
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Log In</a>
+                </li>
+                </ul>
+                <ul class="navbar-nav d-flex flex-row">
+                <li class="nav-item me-3 me-lg-0">
+                    <a class="nav-link" href="#">
+                    <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </li>
+                <li class="nav-item me-3 me-lg-0">
+                    <a class="nav-link" href="#">
+                    <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="nav-item me-3 me-lg-0">
+                    <a class="nav-link" href="#">
+                    <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                </ul>
             </div>
-          </nav>
-        <!-- Nav Bar End -->`
+            </div>
+        </nav>
+        <!-- Navbar -->`
+    }
+
+    const setFooter = () => {
+      const footer = document.querySelector('#footer')
+      footer.innerHTML = `<footer class="bg-dark text-center text-white">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+    
+          <!-- Twitter -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-twitter"></i
+          ></a>
+    
+          <!-- Google -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-google"></i
+          ></a>
+    
+          <!-- Instagram -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+    
+          <!-- Linkedin -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+    
+          <!-- Github -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-github"></i
+          ></a>
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2024 Copyright: A.Formento & Paras
+      </div>
+      <!-- Copyright -->
+    </footer>
+      `
     }
 
     document.addEventListener("DOMContentLoaded", () =>{
-        // setHeader();
+        setHeader();
+        setFooter();
         window.addEventListener("scroll", () =>{
             if (lastScrollY < window.scrollY){
                 nav.classList.add("hidenav");
