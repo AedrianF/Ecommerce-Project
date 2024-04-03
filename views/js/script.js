@@ -39,7 +39,7 @@
     }
 
     document.addEventListener("DOMContentLoaded", () =>{
-        setHeader();
+        // setHeader();
         window.addEventListener("scroll", () =>{
             if (lastScrollY < window.scrollY){
                 nav.classList.add("hidenav");

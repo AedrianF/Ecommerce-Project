@@ -3,16 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="./img/Icon Example.jpg">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/mystyles.css">
     <title>Ecommerce-Project</title>
 </head>
 <body>
-    <header id="navbar">
-
-    </header>
-    
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
+<div class="container-fluid">
+        <div class="row">
+            <div class="col mb-5">
+                <header id="navbar">
+                    <!-- Navbar -->
+                    <nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
+                        <div class="container-fluid">
+                        <a class="navbar-brand" href="#">BRAND</a>
+                        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                            data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Log In</a>
+                            </li>
+                            </ul>
+                            <ul class="navbar-nav d-flex flex-row">
+                            <li class="nav-item me-3 me-lg-0">
+                                <a class="nav-link" href="#">
+                                <i class="fas fa-shopping-cart"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item me-3 me-lg-0">
+                                <a class="nav-link" href="#">
+                                <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item me-3 me-lg-0">
+                                <a class="nav-link" href="#">
+                                <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            </ul>
+                        </div>
+                        </div>
+                    </nav>
+                    <!-- Navbar -->
+                </header>
+            </div> 
+        </div>
+        <div class="row">
+            <div class="col mt-5">
+                <!-- Carousel/slider -->
+                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./img/Bag Image Example.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/Bag Image Example.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/Bag Image Example.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+              </div>     
+            </div>
+        </div>
+</div>  
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+<script src="https://kit.fontawesome.com/33d6570d70.js" crossorigin="anonymous"></script>
 </body>
 </html>
