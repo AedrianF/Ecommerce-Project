@@ -18,7 +18,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">About</a>
@@ -27,7 +27,7 @@
                     <a class="nav-link" href="#">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Log In</a>
+                    <a class="nav-link" href="/login">Log In</a>
                 </li>
                 </ul>
                 <ul class="navbar-nav d-flex flex-row">

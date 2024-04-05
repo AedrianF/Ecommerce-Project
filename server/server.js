@@ -17,12 +17,19 @@
     })
     
     app.use(express.static(`${__dirname}/../views`))
+
     app.get('/',  (request, response) => {
         config.logFile(request, logs)
         response.render(`${config.ROOT}/index`, {page: "index", title: "Home page"})
     })
-    app.get('/index', (request, response) => {
-        response.send(`${config.ROOT}/index`)
+    app.get('/login',  (request, response) => {
+        config.logFile(request, logs)
+        response.sendFile('login.html', { root: config.ROOT})
+    })
+    
+    app.get('/signup',  (request, response) => {
+        config.logFile(request, logs)
+        response.sendFile('signup.html', { root: config.ROOT})
     })
     
 

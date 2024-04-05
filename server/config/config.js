@@ -7,6 +7,10 @@
     config.LOG_FILE = `${__dirname}/../logs/nodejs.log`
     config.MEMBERS = `${__dirname}/../../models/data/members.json`
     config.USERS = `${__dirname}/../../models/data/users.json`
+    config.SERVER = 'testing.oa1ssvu.mongodb.net'
+    config.USERNAME = 'aedrianformento'
+    config.PASSOWRD = 'testing123'
+    config.DATABASE = // Insert Database here when using local??
     config.logFile = (request, logs) => {
         log = {}
         log.date = new Date()
