@@ -5,7 +5,7 @@
 
     /* Connecting to the Database */
     const getMongoClient = (local = false) => { // local is set to false since I'm using atlas set to true if using compass
-        let uri = `mongodb+srv://${connection.USERNAME}:${connection.PASSOWRD}@${connection.SERVER}/?retryWrites=true&w=majority&appName=Testing`
+        let uri = `mongodb+srv://${connection.USERNAME}:${connection.PASSOWRD}@${connection.SERVER}/${connection.DATABASE}?retryWrites=true&w=majority&appName=Testing`
         if (local) {
             uri = `mongodb://127.0.0.1:27017/${connection.DATABASE}`
         }
@@ -79,7 +79,7 @@
          //let log2 = Log(req.method, req.url, req.query, res.statusCode)
                 let collection = client.db().collection("Requests")
                 let log = {
-                    Timestamp: new Date().getUTCDate(),
+                    Timestamp: new Date().toUTCString(),
                     Method: req.method,
                     Path: req.url,
                     Query: req.query,
@@ -108,11 +108,7 @@
         find: find,
         insertOne: insertOne,
         insertMany: insertMany,
-        getMongoClient: getMongoClient,
-        logRequest: logRequest,
     }
-    const moduleExport = util
-    if (typeof __dirname != 'undefined')
-        module.exports = moduleExport
 
+    module.exports = util
 })()

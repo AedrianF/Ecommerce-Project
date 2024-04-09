@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/AedrianF/Ecommerce-Project#readme",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "express": "^4.19.2",
     "mongodb": "^6.5.0"
   }

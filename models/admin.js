@@ -1,10 +1,10 @@
 // using factory method design pattern
-const User = (email, hashedPassword) => {
+const Admin = (email, hashedPassword) => {
     return {
         email: email,
         hashedPassword: hashedPassword,
-        role:"Member",
+        role:"Admin",
         since: new Date().toUTCString()
     }
 }
-module.exports = User
+module.exports = Admin

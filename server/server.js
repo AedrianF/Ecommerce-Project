@@ -1,10 +1,9 @@
 (() => {
-    //const config = require(`${__dirname}/config/config`)
-    //const Utils = require(`${__dirname}/utils`)
     const fs = require('fs')
     const express = require('express')
+    const homeController = require(`${__dirname}/../controllers/HomeController`)
+    const memberController = require(`${__dirname}/../controllers/MemberController`)
     const app = express()
-    const logs = []
     const config = require(`${__dirname}/config/config`)
 
     /**
@@ -16,23 +15,12 @@
         next()
     })
     
-    app.use(express.static(`${__dirname}/../views`))
+   app.use(express.static(`${__dirname}/../views`))
 
-    app.get('/',  (request, response) => {
-        config.logFile(request, logs)
-        response.render(`${config.ROOT}/index`, {page: "index", title: "Home page"})
-    })
-    app.get('/login',  (request, response) => {
-        config.logFile(request, logs)
-        response.sendFile('login.html', { root: config.ROOT})
-    })
-    
-    app.get('/signup',  (request, response) => {
-        config.logFile(request, logs)
-        response.sendFile('signup.html', { root: config.ROOT})
-    })
-    
+    app.use(homeController)     
+    app.use(memberController)
 
+ 
     // Start Node.js HTTP webserver
     app.listen(config.PORT, "127.0.0.1", () => {
         console.log(`\t|Server listening on ${config.PORT}`)

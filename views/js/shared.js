@@ -1,9 +1,5 @@
 (() => {
-
-    // This will hide the nav when scrolled down and show the navbar when scrolled up
-    const nav = document.querySelector("#navbar");
-    let lastScrollY = window.scrollY;
-
+ 
     const setHeader = () => {
         const navbar = document.getElementById('navbar')
         navbar.innerHTML = `<!-- Navbar -->
@@ -18,7 +14,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/index">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">About</a>
@@ -27,7 +23,7 @@
                     <a class="nav-link" href="#">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/login">Log In</a>
+                    <a class="nav-link" href="login.html">Log In</a>
                 </li>
                 </ul>
                 <ul class="navbar-nav d-flex flex-row">
@@ -106,16 +102,5 @@
     document.addEventListener("DOMContentLoaded", () =>{
         setHeader();
         setFooter();
-        window.addEventListener("scroll", () =>{
-            if (lastScrollY < window.scrollY){
-                nav.classList.add("hidenav");
-            }
-            else {
-                    nav.classList.remove("hidenav");
-                }
-                lastScrollY = window.scrollY;
-            })
     })
-
-
 })()

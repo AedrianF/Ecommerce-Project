@@ -9,8 +9,8 @@
     config.USERS = `${__dirname}/../../models/data/users.json`
     config.SERVER = 'testing.oa1ssvu.mongodb.net'
     config.USERNAME = 'aedrianformento'
-    config.PASSOWRD = 'testing123'
-    config.DATABASE = // Insert Database here when using local??
+    config.PASSOWRD = 'newpass123'
+    config.DATABASE = 'E-commerce'
     config.logFile = (request, logs) => {
         log = {}
         log.date = new Date()
@@ -20,8 +20,8 @@
         fs.appendFile(config.LOG_FILE, JSON.stringify(logs), (error) => {
             if (error)
                 console.log(`\t|Error appending to a file\n\t|${error}`)
-            // else
-            //     console.info('\t|File was appended successfully!')
+            else
+             console.info('\t|File was appended successfully!')
         })
     }
     module.exports = config
