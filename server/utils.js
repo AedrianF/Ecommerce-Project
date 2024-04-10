@@ -24,7 +24,7 @@
     //-------------------------------------------------------------------------
     //find matching documents
     const find = async (collection, query) => {
-        return collection.find(query).toArray()
+            return collection.find(query).toArray()
             .catch(err => {
                 console.log("Could not find ", query, err.message);
             })
