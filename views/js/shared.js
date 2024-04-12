@@ -27,10 +27,8 @@
                 </li>
                 </ul>
                 <ul class="navbar-nav d-flex flex-row">
-                <li class="nav-item me-3 me-lg-0">
-                    <a class="nav-link" href="#">
-                    <i class="fas fa-shopping-cart"></i>
-                    </a>
+                <li class="mt-2" id="welcomeUser"></li>
+                <li class="nav-item me-3 me-lg-0" id="shoppingCart"> 
                 </li>
                 <li class="nav-item me-3 me-lg-0">
                     <a class="nav-link" href="#">

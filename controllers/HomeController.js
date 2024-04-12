@@ -1,4 +1,4 @@
-const util = require(`${__dirname}/../server/utils`)
+const util = require(`${__dirname}/../models/utils`)
 const express = require('express')
 const homeController = express.Router()
 const config = require(`${__dirname}/../server/config/config`)

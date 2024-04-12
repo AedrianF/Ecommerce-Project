@@ -1,6 +1,6 @@
 (() => {
     const MongoClient = require('mongodb').MongoClient
-    const connection = require("./config/config")
+    const connection = require(`${__dirname}/../server/config/config`)
 
 
     /* Connecting to the Database */

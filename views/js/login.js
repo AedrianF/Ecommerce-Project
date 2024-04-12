@@ -34,24 +34,26 @@
 
     const login = async (event) => {
         event.preventDefault()
-        email = document.querySelector('#Login input[name="email"]').value
+        console.log("Inside Log in function")
+        let email = document.querySelector('#emailLogin').value
         console.log(email)
-        let password = document.querySelector('#Login input[name="password"]').value
-        const reply = await postData('/signin', { email, password })
+        let password = document.querySelector('#passwordLogin').value
+        const reply = await postData('/login', { email, password })
         if (reply.error) {
-            loginWarning.innerHTML = `${reply.error}`
-            show(loginWarning)
+            // Will implement later
+            console.log("An Error Occurred")
         }
         else if (reply.success) {
-            console.log(reply, reply)
-            window.history.pushState(navigation.posts, "", `/${navigation.posts.url}`)
-            displaySection(navigation.posts)
-            authorize(true)
-            document.querySelector('[data-authenticated] > span').innerHTML = `Welcome ${email}!`
+            console.log(reply)
+            document.querySelector('#welcomeUser').innerHTML = `Welcome ${email}!`
+            document.querySelector('#shoppingCart').innerHTML = `<a class="nav-link" href="#">
+            <i class="fas fa-shopping-cart"></i>
+            </a>`
         }
       }
 
     document.addEventListener("DOMContentLoaded", () =>{
+        document.querySelector('#loginButton').onclick = login
     })
 
 
