@@ -1,5 +1,4 @@
 (() => {
-    const fs = require('fs')
     const express = require('express')
     const homeController = require(`${__dirname}/../controllers/HomeController`)
     const memberController = require(`${__dirname}/../controllers/MemberController`)
@@ -11,7 +10,6 @@
      */
     app.use(express.json());
     app.use((request, response, next) => {
-       // config.logFile(request, logs)
         next()
     })
     
