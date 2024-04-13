@@ -1,128 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/jpg" href="./img/Icon Example.jpg">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/mystyles.css">
-    <title>Ecommerce-Project</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/jpg" href="./img/Icon Example.jpg">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/mystyles.css">
+  <title>Ecommerce-Project</title>
 </head>
+
 <body>
-<div class="container-fluid">
-        <div class="row">
-            <div class="col mb-5">
-                <header id="navbar">
-                  <!-- Nav Bar goes here code is in views/js/script.js -->
-                </header>
-            </div> 
-        </div> <!--Row for navbar ends-->
-        <div class="row">
-            <div class="col mt-5">
-                <!-- Carousel/slider -->
-                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="./img/Bag Image Example.jpg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./img/Bag Image Example.jpg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./img/Bag Image Example.jpg" class="d-block w-100" alt="...">
-                        </div>
+  <div class="container-fluid">
+    <div class="col-md-1">
+      <div class="col mb-5">
+        <header id="navbar">
+          <!-- Nav Bar goes here code is in views/js/script.js -->
+        </header>
+      </div>
+    </div> <!--Row for navbar ends-->
+    <dialog id="noticeDialog" class="alert alert-dark text-white h4">
+      <div class="row">
+        <div class="col-md-1">
+        </div>
+        <!--One column in any screen device-->
+        <div class="col-md-10">
+          <div class="card">
+            <div class="card-header h2 text-white bg-dark text-center">
+              Terms and Conditions
+            </div>
+            <div class="card-body bg-secondary">
+              <blockquote class="blockquote mb-0">
+                <p>
+                <ol>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus enim, impedit illum voluptate
+                    iure in distinctio asperiores, repellat ipsam sed eos reiciendis officia blanditiis illo unde
+                    aperiam maxime mollitia aspernatur.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum optio ipsam ipsa tempore ab iste
+                    dolore distinctio earum et? Quia officia alias aperiam fugit quas molestias odio repellendus,
+                    officiis aut!</li>
+                  <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum iure commodi unde possimus
+                    voluptates sed iste earum fuga quis architecto sint ullam dolore, quia similique consectetur, quo
+                    tempora, harum assumenda!</li>
+                  <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet incidunt excepturi totam molestias,
+                    repellat dolore quia eos ullam vero nisi, natus, recusandae asperiores temporibus deserunt
+                    voluptates nulla libero nemo. A?</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam iure, quos repudiandae
+                    reprehenderit vel hic? Nam quis vel, id debitis repellendus necessitatibus facilis animi, adipisci
+                    explicabo ipsum exercitationem eius sequi.</li>
+                </ol>
+                </p>
+                <hr>
+                <footer class="blockquote-footer">
+                  <div class="input-group mb-3">
+                    <div class="input-group-text">
+                      <input class="form-check-input mt-0" type="checkbox" value=""
+                        aria-label="Checkbox for following text input" id="agree">
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-              </div>     
+                    <input type="text" class="form-control" aria-label="I agree to terms & conditions" value="I agree"
+                      disabled>
+                  </div>
             </div>
-        </div> <!--Row for slider ends-->
-        <h2 class="text-center mt-5 text-light">PRODUCTS</h2>
-        <div class="row row-cols-1 row-cols-md-3 g-4 mt-5 mb-5">
-            <div class="col">
-              <div class="card h-100">
-                <img src="./img/Product Example_1.jpg" class="card-img-top" alt="..."/>
-                <div class="card-body">
-                  <h5 class="card-title">Product Name</h5>
-                  <p class="card-text">
-                    This is a longer card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.
-                  </p>
-                </div>
-              </div> 
-            </div> <!--Card 1 ends-->
-            <div class="col">
-              <div class="card h-100">
-                <img src="./img/Product Example_2.jpg" class="card-img-top" alt="..."/>
-                <div class="card-body">
-                  <h5 class="card-title">Product Name</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-            </div> <!--Card 2 ends-->
-            <div class="col">
-              <div class="card h-100">
-                <img src="./img/Product Example_3.jpg" class="card-img-top" alt="..."/>
-                <div class="card-body">
-                  <h5 class="card-title">Product Name</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                </div>
-              </div>
-            </div> <!--Card 3 ends-->
-            <div class="col">
-              <div class="card h-100">
-                <img src="./img/Product Example_4.jpg" class="card-img-top" alt="..."/>
-                <div class="card-body">
-                  <h5 class="card-title">Product Name</h5>
-                  <p class="card-text">
-                    This is a longer card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.
-                  </p>
-                </div>
-              </div>
-            </div> <!--Card 4 ends-->
-            <div class="col">
-              <div class="card h-100">
-                <img src="./img/Product Example_5.jpg" class="card-img-top" alt="..."/>
-                <div class="card-body">
-                  <h5 class="card-title">Product Name</h5>
-                  <p class="card-text">
-                    This is a longer card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.
-                  </p>
-                </div>
-              </div>
-            </div> <!--Card 5 ends-->
-            <div class="col">
-              <div class="card h-100">
-                <img src="./img/Product Example_6.jpg" class="card-img-top" alt="..."/>
-                <div class="card-body">
-                  <h5 class="card-title">Product Name</h5>
-                  <p class="card-text">
-                    This is a longer card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.
-                  </p>
-                </div>
-              </div>
-            </div> <!--Card 6 ends-->
-          </div> <!--Row for card ends-->
-        <div class="row">
-            <div class="col">
-                <footer id="footer">
-                    <!--Footer goes here  -->
-                </footer>
+
+            <form method="dialog" class="text-center">
+              <button class="btn btn-lg btn-dark" id="noticeButton">OK</button>
+            </form>
+            </footer>
+            </blockquote>
+          </div>
+        </div>
+        <div class="col-md-1"> </div>
+
+    </dialog>
+
+
+    <div class="row">
+      <div class="col mt-5">
+        <!--Carousel/slider -->
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./img/bag3.jpg" class="d-block w-100" alt="...">
             </div>
-        </div> <!--Row for footer ends-->
-</div>  
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/shared.js"></script>
-<script src="https://kit.fontawesome.com/33d6570d70.js" crossorigin="anonymous"></script>
+            <div class="carousel-item h-100">
+              <img src="./img/bag3.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item h-100">
+              <img src="./img/bag3.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>> <!--Row for slider ends-->
+
+
+    <h2 class="text-center mt-5 text-light">PRODUCTS</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-5 mb-5">
+      <div class="col">
+        <div class="card h-100">
+          <img src="./img/Product Example_1.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Product Name</h5>
+            <p class="card-text">
+              This is a longer card with supporting text below as a natural lead-in to
+              additional content. This content is a little bit longer.
+            </p>
+          </div>
+        </div>
+      </div> <!--Card 1 ends-->
+      <div class="col">
+        <div class="card h-100">
+          <img src="./img/Product Example_2.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Product Name</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+              additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div> <!--Card 2 ends-->
+      <div class="col">
+        <div class="card h-100">
+          <img src="./img/Product Example_3.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Product Name</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+              content.</p>
+          </div>
+        </div>
+      </div> <!--Card 3 ends-->
+      <div class="col">
+        <div class="card h-100">
+          <img src="./img/Product Example_4.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Product Name</h5>
+            <p class="card-text">
+              This is a longer card with supporting text below as a natural lead-in to
+              additional content. This content is a little bit longer.
+            </p>
+          </div>
+        </div>
+      </div> <!--Card 4 ends-->
+      <div class="col">
+        <div class="card h-100">
+          <img src="./img/Product Example_5.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Product Name</h5>
+            <p class="card-text">
+              This is a longer card with supporting text below as a natural lead-in to
+              additional content. This content is a little bit longer.
+            </p>
+          </div>
+        </div>
+      </div> <!--Card 5 ends-->
+      <div class="col">
+        <div class="card h-100">
+          <img src="./img/Product Example_6.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Product Name</h5>
+            <p class="card-text">
+              This is a longer card with supporting text below as a natural lead-in to
+              additional content. This content is a little bit longer.
+            </p>
+          </div>
+        </div>
+      </div> <!--Card 6 ends-->
+    </div> <!--Row for card ends-->
+    <div class="row">
+      <div class="col">
+        <footer id="footer">
+          <!--Footer goes here  -->
+        </footer>
+      </div>
+    </div> <!--Row for footer ends-->
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/shared.js"></script>
+  <script src="js/index.js"></script>
+  <script src="https://kit.fontawesome.com/33d6570d70.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

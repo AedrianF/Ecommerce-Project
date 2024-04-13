@@ -34,29 +34,39 @@
 
     const signup = async (event) => {
         // prevent refreshing the page
-        event.preventDefault()
+        //event.preventDefault()
         let email = document.querySelector('#emailSignup').value
         let password = document.querySelector('#passwordSignup').value
         let confirm = document.querySelector('#confirmSignup').value
         console.log(email, password, confirm)
-  
-        if (password == confirm) {
-            const reply = await postData('/signup', { email, password })
-            if (reply.error) {
-              // Will add later to indicate an error accord with postData?
-                console.log(reply.error)
+        if(email.length != 0){
+          if(password.length != 0){
+            if (password == confirm) {
+                const reply = await postData('/signup', { email, password })
+                if (reply.error) {
+                  // Will add later to indicate an error accord with postData?
+                    console.log(reply.error)
+                }
+                else if (reply.success) {
+                  // Will add later to indicate you have succesfully signup?
+                    console.log(reply)
+                }
             }
-            else if (reply.success) {
-              // Will add later to indicate you have succesfully signup?
-                console.log(reply)
+            else {
+              console.log("Passwords do not match. Re-enter your password")
+              /*
+                registerWarning.innerHTML = 'Passwords do not match. Re-enter your password'
+                show(registerWarning) */
             }
+          }
+          else{
+            console.log("Please Input a password")
+          }
         }
-        else {
-          console.log("Passwords do not match. Re-enter your password")
-          /*
-            registerWarning.innerHTML = 'Passwords do not match. Re-enter your password'
-            show(registerWarning) */
+        else{
+          console.log("Please Input an Email")
         }
+       
       }
     document.addEventListener("DOMContentLoaded", () =>{
         document.querySelector('#signupButton').onclick = signup

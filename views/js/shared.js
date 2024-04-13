@@ -17,20 +17,18 @@
                     <a class="nav-link active" aria-current="page" href="/index">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="/about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="/contact">Contact</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/login">Log In</a>
                 </li>
                 </ul>
                 <ul class="navbar-nav d-flex flex-row">
-                <li class="nav-item me-3 me-lg-0">
-                    <a class="nav-link" href="#">
-                    <i class="fas fa-shopping-cart"></i>
-                    </a>
+                <li class="mt-2" id="welcomeUser"></li>
+                <li class="nav-item me-3 me-lg-0" id="shoppingCart"> 
                 </li>
                 <li class="nav-item me-3 me-lg-0">
                     <a class="nav-link" href="#">

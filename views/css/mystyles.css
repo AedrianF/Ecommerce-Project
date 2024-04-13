@@ -3,6 +3,7 @@ body{
     background-color: #4f4f4f;
 }
 
+
 @media (max-width: 991px) {
     .navbar-scroll {
       background-color: #fff;
@@ -88,3 +89,4 @@ body{
     height: 100%;
     }
     }
+
