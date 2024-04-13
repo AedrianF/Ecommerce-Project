@@ -72,11 +72,10 @@
                 console.log('\t|Connected successfully to MongoDB!',
                     conn.s.url.replace(/:([^:@]{1,})@/, ':****@'))
                 /**
-          * Create a collection in a MongoDB database
-          * Like a database, a collection will be created if it does not exist
-          * The collection will only be created once we insert a document
-          */
-         //let log2 = Log(req.method, req.url, req.query, res.statusCode)
+                    * Create a collection in a MongoDB database
+                    * Like a database, a collection will be created if it does not exist
+                    * The collection will only be created once we insert a document
+                */
                 let collection = client.db().collection("Requests")
                 let log = {
                     Timestamp: new Date().toUTCString(),
@@ -85,24 +84,17 @@
                     Query: req.query,
                     'Status Code': res.statusCode,
                 }
-                //console.log(log)
                 util.insertOne(collection, log)
                 
             })
             .catch(err => console.log(`\t|Could not connect to MongoDB Server\n\t|${err}`))
             .finally(() => {
-                //client.close()
-                //console.log('Disconnected')
+                client.close()
+                console.log('Disconnected')
             })
             next()
     }
     const util = {
-     /* url: 'localhost',
-        username: 'webuser',
-        password: 'letmein',
-        port: 22643,
-        database: 'forum',
-        collections: ['logs', 'posts', 'users', 'roles'], */
         getMongoClient: getMongoClient,
         logRequest: logRequest,
         find: find,

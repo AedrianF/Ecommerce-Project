@@ -1,12 +1,10 @@
 const util = require(`${__dirname}/../models/utils`)
 const config = require(`${__dirname}/../server/config/config`)
-const user = require(`${__dirname}/../models/user`)
 const mongodbClient = util.getMongoClient()
 const bcrypt = require("bcrypt")
 const express = require('express')
 const User = require("../models/user")
 const memberController = express.Router()
-const logs = []
 
 memberController.get('/login', util.logRequest , async (request, response) => {
     console.log("Inside memberController.get /login")
