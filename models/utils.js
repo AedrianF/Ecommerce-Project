@@ -4,7 +4,7 @@
 
 
     /* Connecting to the Database */
-    const getMongoClient = (local = false) => { // local is set to false since I'm using atlas set to true if using compass
+    const getMongoClient = (local = true) => { // local is set to false since I'm using atlas set to true if using compass
         let uri = `mongodb+srv://${connection.USERNAME}:${connection.PASSOWRD}@${connection.SERVER}/${connection.DATABASE}?retryWrites=true&w=majority&appName=Testing`
         if (local) {
             uri = `mongodb://127.0.0.1:27017/${connection.DATABASE}`
